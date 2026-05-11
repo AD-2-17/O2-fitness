@@ -3,7 +3,7 @@
     --surface: #0a0a0a;
     --text: #f0f0f0;
     --text-muted: #808080;
-    --accent: #ff3300; /* Set to fiery orange/red, assuming U-VA colors. Feel free to tweak. */
+    --accent: #ff3300; /* Set to fiery orange/red, assuming NSG colors. Feel free to tweak. */
     --border: rgba(255, 255, 255, 0.08);
     --glass: rgba(10, 10, 10, 0.6);
     --font-heading: 'Outfit', sans-serif;
@@ -60,7 +60,7 @@ body.loading {
     text-indent: 0.5em;
 }
 .preloader-text::after {
-    content: "U-VA FITNESS";
+    content: "NSG FITNESS";
     position: absolute;
     top: 0; left: 0;
     color: #fff;
@@ -730,6 +730,7 @@ a {
     .plans-grid { grid-template-columns: 1fr 1fr; }
     .about-grid, .trainers-grid {
         grid-template-columns: 1fr;
+        gap: 4rem;
     }
     .footer-grid {
         grid-template-columns: 1fr 1fr;
@@ -740,13 +741,37 @@ a {
 }
 @media (max-width: 768px) {
     .nav-links { display: none; }
-    .hero-title { font-size: 4rem; }
-    .facilities-grid, .insta-grid, .plans-grid {
+    .hero-title { font-size: 3.5rem; }
+    .hero-subtitle { font-size: 0.9rem; padding: 0 1rem; }
+    .section-title { font-size: 2.5rem; margin-bottom: 2rem; }
+    
+    .about, .facilities, .trainers, .memberships { padding: 6rem 0; }
+    .instagram { padding: 4rem 0 6rem; }
+    .footer { padding: 6rem 0 2rem; }
+    
+    .facilities-grid, .insta-grid, .plans-grid, .footer-grid {
         grid-template-columns: 1fr;
+        gap: 2rem;
+        margin-top: 3rem;
     }
-    .footer-grid {
-        grid-template-columns: 1fr;
-    }
-    .cursor, .cursor-follower { display: none; }
-    * { cursor: auto; }
+    .about-grid { gap: 3rem; }
+    
+    .trainer-card { flex-direction: column; text-align: center; gap: 1.5rem; }
+    .plan-card { padding: 2.5rem 1.5rem; }
+    .footer-huge-title { font-size: 3rem; margin-bottom: 3rem; }
+    
+    .cursor, .cursor-follower { display: none !important; }
+    * { cursor: auto !important; }
+    
+    .marquee-content { font-size: 1.5rem; }
+    .ambient-plate { display: none; }
+    .about-text p { font-size: 1.1rem; }
+}
+@media (max-width: 480px) {
+    .hero-title { font-size: 2.5rem; }
+    .plan-card .price { font-size: 3rem; }
+    .btn-primary, .btn-secondary { padding: 1rem 1.5rem; font-size: 0.8rem; }
+    .logo { font-size: 1.2rem; }
+    .section-title { font-size: 2rem; }
+    .footer-huge-title { font-size: 2.5rem; }
 }
