@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U-VA FITNESS | Elite Luxury Fitness</title>
+    <meta name="description" content="Premium personal training, Zumba, CrossFit and exclusive fitness experience in Badlapur. Join U-VA FITNESS.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;300;400;700;900&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    
+    <!-- GSAP & Lenis for Smooth Cinematic Scrolling -->
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.39/dist/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+<body class="loading">
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="preloader-text">U-VA FITNESS</div>
+        <div class="preloader-progress"></div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Ambient Audio -->
+    <audio id="ambient-audio" loop>
+        <!-- A subtle cinematic dark ambient drone -->
+        <source src="https://cdn.pixabay.com/download/audio/2022/11/22/audio_febc508520.mp3?filename=dark-ambient-128823.mp3" type="audio/mpeg">
+    </audio>
+    <button id="audio-toggle" class="audio-btn magnetic" aria-label="Toggle Audio">
+        <span class="audio-bars">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </span>
+    </button>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">U-VA FITNESS</div>
+        <div class="nav-links">
+            <a href="#about" class="magnetic" data-cursor="hover">About</a>
+            <a href="#facilities" class="magnetic" data-cursor="hover">Facilities</a>
+            <a href="#trainers" class="magnetic" data-cursor="hover">Trainers</a>
+            <a href="#memberships" class="magnetic" data-cursor="hover">Memberships</a>
+        </div>
+        <a href="#contact" class="btn-primary magnetic" data-cursor="hover">Join U-VA</a>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-bg">
+                <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1470&auto=format&fit=crop" alt="Dark Gym Environment">
+                <div class="hero-overlay"></div>
+                <div class="particles" id="particles"></div>
+            </div>
+            <div class="hero-content">
+                <h1 class="hero-title" data-speed="0.8">SMASH<br>IT.</h1>
+                <p class="hero-subtitle">The ultimate premium fitness experience.</p>
+                <div class="scroll-indicator">
+                    <span>Scroll</span>
+                    <div class="line">
+                        <div class="line-progress"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="ambient-plate plate-1 parallax-img"></div>
+            <div class="ambient-plate plate-2 parallax-img"></div>
+            <div class="container relative-z">
+                <div class="about-grid">
+                    <div class="about-text gs_reveal">
+                        <h2 class="section-title">UNFORGIVING<br><span class="accent">LUXURY</span></h2>
+                        <p>U-VA FITNESS is Badlapur's premier, results-driven training facility. We combine high-end amenities with an underground, gritty work ethic. Featuring functional training, CrossFit, Zumba, and more.</p>
+                        <p>With an air-conditioned environment, state-of-the-art equipment, and expert trainers, our methodology is designed for those who demand the absolute best from themselves and their environment.</p>
+                    </div>
+                    <div class="about-image-container gs_reveal gs_reveal_right">
+                        <div class="about-image">
+                            <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=1470&auto=format&fit=crop" alt="Premium Weight Equipment" class="parallax-img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats/Transformations Marquee -->
+        <section class="marquee-section">
+            <div class="marquee">
+                <div class="marquee-content">
+                    <span>ELITE TRAINING •</span>
+                    <span>PROVEN RESULTS •</span>
+                    <span>CELEBRITY COACHES •</span>
+                    <span>EXCLUSIVE COMMUNITY •</span>
+                    <span>ELITE TRAINING •</span>
+                    <span>PROVEN RESULTS •</span>
+                    <span>CELEBRITY COACHES •</span>
+                    <span>EXCLUSIVE COMMUNITY •</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Facilities Section -->
+        <section id="facilities" class="facilities">
+            <div class="container">
+                <h2 class="section-title text-center gs_reveal">THE DUNGEON</h2>
+                <div class="facilities-grid">
+                    <div class="facility-card gs_reveal gs_reveal_up" data-cursor="view">
+                        <div class="facility-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?q=80&w=1470&auto=format&fit=crop" alt="Functional Training & CrossFit">
+                        </div>
+                        <div class="card-content">
+                            <h3>CrossFit & Functional</h3>
+                            <p>Pro-grade equipment & rigs.</p>
+                        </div>
+                    </div>
+                    <div class="facility-card gs_reveal gs_reveal_up delay-1" data-cursor="view">
+                        <div class="facility-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1526506114864-42845c477960?q=80&w=1470&auto=format&fit=crop" alt="Strength & Conditioning">
+                        </div>
+                        <div class="card-content">
+                            <h3>Strength & Cardio</h3>
+                            <p>Matte black premium equipment.</p>
+                        </div>
+                    </div>
+                    <div class="facility-card gs_reveal gs_reveal_up delay-2" data-cursor="view">
+                        <div class="facility-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1599058917212-d750089bc07e?q=80&w=1469&auto=format&fit=crop" alt="Recovery Lounge">
+                        </div>
+                        <div class="card-content">
+                            <h3>Zumba & Aerobics</h3>
+                            <p>High-energy group classes.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trainers Section -->
+        <section id="trainers" class="trainers">
+            <div class="container">
+                <h2 class="section-title gs_reveal">MASTER<br>COACHES</h2>
+                <div class="trainers-grid">
+                    <div class="trainer-card gs_reveal">
+                        <div class="trainer-img">
+                            <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=1470&auto=format&fit=crop" alt="Expert Trainer">
+                        </div>
+                        <div class="trainer-info">
+                            <h4>Head Coach</h4>
+                            <p>Master Trainer</p>
+                        </div>
+                    </div>
+                    <div class="trainer-card gs_reveal delay-1">
+                        <div class="trainer-img">
+                            <img src="https://images.unsplash.com/photo-1594381898411-846e7d193883?q=80&w=1374&auto=format&fit=crop" alt="Trainer 2">
+                        </div>
+                        <div class="trainer-info">
+                            <h4>Elite Roster</h4>
+                            <p>Hand-picked Professionals</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Memberships Section -->
+        <section id="memberships" class="memberships">
+            <div class="container">
+                <h2 class="section-title text-center gs_reveal">JOIN U-VA FITNESS</h2>
+                <div class="plans-grid">
+                    <div class="plan-card gs_reveal">
+                        <h3>1 Month</h3>
+                        <div class="price">Standard</div>
+                        <p class="plan-desc">Full access to U-VA Fitness.</p>
+                        <ul class="plan-features">
+                            <li>Cardio & Strength Access</li>
+                            <li>Zumba & CrossFit Classes</li>
+                            <li>Locker Facility</li>
+                            <li>Free Diet Guidance</li>
+                        </ul>
+                        <a href="https://wa.me/910000000000?text=Hi,%20I'm%20interested%20in%20the%201%20Month%20Membership." target="_blank" class="btn-secondary magnetic" data-cursor="hover">Select Plan</a>
+                    </div>
+                    <div class="plan-card gs_reveal delay-1">
+                        <h3>3 Months</h3>
+                        <div class="price">Quarterly</div>
+                        <p class="plan-desc">Commit to your goals.</p>
+                        <ul class="plan-features">
+                            <li>All 1-Month Benefits</li>
+                            <li>Progress Tracking</li>
+                            <li>Body Composition Analysis</li>
+                            <li>Extended Gym Hours</li>
+                        </ul>
+                        <a href="https://wa.me/910000000000?text=Hi,%20I'd%20like%20details%20for%20the%203%20Month%20Plan." target="_blank" class="btn-secondary magnetic" data-cursor="hover">Select Plan</a>
+                    </div>
+                    <div class="plan-card premium gs_reveal delay-2">
+                        <div class="glow"></div>
+                        <div class="premium-badge">Most Popular</div>
+                        <h3>6 Months</h3>
+                        <div class="price">Half-Yearly</div>
+                        <p class="plan-desc">Best value for dedicated individuals.</p>
+                        <ul class="plan-features">
+                            <li>All 3-Month Benefits</li>
+                            <li>1 Personal Training Session</li>
+                            <li>Advanced Diet Plan</li>
+                            <li>Guest Passes (2)</li>
+                        </ul>
+                        <a href="https://wa.me/910000000000?text=Hi,%20I%20want%20to%20join%20the%206%20Month%20Membership." target="_blank" class="btn-primary magnetic" data-cursor="hover">Select Plan</a>
+                    </div>
+                    <div class="plan-card gs_reveal delay-3">
+                        <h3>12 Months</h3>
+                        <div class="price">Annual</div>
+                        <p class="plan-desc">The ultimate commitment.</p>
+                        <ul class="plan-features">
+                            <li>All 6-Month Benefits</li>
+                            <li>Free U-VA Merch</li>
+                            <li>Priority Event Access</li>
+                            <li>Freeze Option (Up to 1 Month)</li>
+                        </ul>
+                        <a href="https://wa.me/910000000000?text=Hi,%20I%20want%20to%20join%20the%20Premium%20Annual%20Membership." target="_blank" class="btn-secondary magnetic" data-cursor="hover">Select Plan</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Instagram Inspiration -->
+        <section class="instagram">
+            <div class="container">
+                <h2 class="section-title text-center gs_reveal">@UVAFITNESSBADLAPUR</h2>
+                <div class="insta-grid">
+                    <a href="https://www.instagram.com/uvafitnessbadlapur/" target="_blank" class="insta-item gs_reveal" data-cursor="click">
+                        <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=600&auto=format&fit=crop" alt="Instagram 1">
+                    </a>
+                    <a href="https://www.instagram.com/uvafitnessbadlapur/" target="_blank" class="insta-item gs_reveal delay-1" data-cursor="click">
+                        <img src="https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?q=80&w=600&auto=format&fit=crop" alt="Instagram 2">
+                    </a>
+                    <a href="https://www.instagram.com/uvafitnessbadlapur/" target="_blank" class="insta-item gs_reveal delay-2" data-cursor="click">
+                        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=600&auto=format&fit=crop" alt="Instagram 3">
+                    </a>
+                    <a href="https://www.instagram.com/uvafitnessbadlapur/" target="_blank" class="insta-item gs_reveal delay-3" data-cursor="click">
+                        <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?q=80&w=600&auto=format&fit=crop" alt="Instagram 4">
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+        <footer id="contact" class="footer">
+            <div class="footer-glow parallax-img"></div>
+            <div class="container">
+                <div class="footer-top gs_reveal gs_reveal_up">
+                    <h2 class="footer-huge-title">READY TO START?</h2>
+                    <a href="https://wa.me/910000000000?text=Hi,%20I'm%20ready%20to%20start%20my%20fitness%20journey!" target="_blank" class="btn-primary magnetic footer-cta" data-cursor="hover">Contact via WhatsApp</a>
+                </div>
+                
+                <div class="footer-grid">
+                    <div class="footer-brand gs_reveal">
+                        <div class="logo">U-VA FITNESS</div>
+                        <p class="brand-tagline">BE YOUR BEST.</p>
+                    </div>
+                    <div class="footer-info gs_reveal delay-1">
+                        <h4>VISIT US</h4>
+                        <div class="location-item">
+                            <p>Nadanvan Garden, Near Badlapur Station<br>Shani Nagar, Badlapur, Thane, Mumbai</p>
+                        </div>
+                        <div class="location-item mt-2">
+                            <p><strong>Hours:</strong> 5:30 AM – 11:00 PM</p>
+                        </div>
+                        <a href="https://maps.google.com/?q=U-Va+Fitness+Badlapur" target="_blank" class="map-link magnetic" data-cursor="hover">Get Directions &rarr;</a>
+                    </div>
+                    <div class="footer-socials gs_reveal delay-2">
+                        <h4>CONNECT</h4>
+                        <a href="https://wa.me/910000000000" target="_blank" class="magnetic" data-cursor="hover">WhatsApp</a>
+                        <a href="tel:+910000000000" class="magnetic" data-cursor="hover">Call Us</a>
+                        <a href="mailto:info@uvafitness.com" class="magnetic" data-cursor="hover">Email</a>
+                        <a href="https://www.instagram.com/uvafitnessbadlapur/" target="_blank" class="magnetic" data-cursor="hover">Instagram</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 U-VA FITNESS. Designed for Excellence.</p>
+                <p class="creator">MADE BY ATHARV DONGARE</p>
+            </div>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
