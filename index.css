@@ -745,13 +745,18 @@ a {
     .hero-subtitle { font-size: 0.9rem; padding: 0 1rem; }
     .section-title { font-size: 2.5rem; margin-bottom: 2rem; }
     
-    .about, .facilities, .trainers, .memberships { padding: 6rem 0; }
-    .instagram { padding: 4rem 0 6rem; }
-    .footer { padding: 6rem 0 2rem; }
+    .about, .facilities, .trainers, .memberships { padding: 5rem 0; }
+    .instagram { padding: 4rem 0 5rem; }
+    .footer { padding: 5rem 0 2rem; }
     
-    .facilities-grid, .insta-grid, .plans-grid, .footer-grid {
+    .facilities-grid, .plans-grid, .footer-grid {
         grid-template-columns: 1fr;
         gap: 2rem;
+        margin-top: 3rem;
+    }
+    .insta-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
         margin-top: 3rem;
     }
     .about-grid { gap: 3rem; }
@@ -766,12 +771,21 @@ a {
     .marquee-content { font-size: 1.5rem; }
     .ambient-plate { display: none; }
     .about-text p { font-size: 1.1rem; }
+    
+    .scroll-indicator {
+        bottom: 20px;
+    }
+    .navbar {
+        padding: 1.5rem 5%;
+    }
 }
 @media (max-width: 480px) {
-    .hero-title { font-size: 2.5rem; }
-    .plan-card .price { font-size: 3rem; }
-    .btn-primary, .btn-secondary { padding: 1rem 1.5rem; font-size: 0.8rem; }
-    .logo { font-size: 1.2rem; }
-    .section-title { font-size: 2rem; }
-    .footer-huge-title { font-size: 2.5rem; }
+    .hero-title { font-size: 2.2rem; }
+    .hero-subtitle { font-size: 0.8rem; letter-spacing: 0.1em; }
+    .plan-card .price { font-size: 2.5rem; }
+    .btn-primary, .btn-secondary { padding: 0.8rem 1.2rem; font-size: 0.75rem; }
+    .logo { font-size: 1rem; }
+    .section-title { font-size: 1.8rem; }
+    .footer-huge-title { font-size: 2rem; }
+    .plan-card { padding: 2rem 1.2rem; }
 }
