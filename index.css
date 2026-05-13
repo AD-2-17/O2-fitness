@@ -3,7 +3,7 @@
     --surface: #0a0a0a;
     --text: #f0f0f0;
     --text-muted: #808080;
-    --accent: #ff3300; /* Set to fiery orange/red, assuming NSG colors. Feel free to tweak. */
+    --accent: #00A3E0; /* Vibrant O2 Blue */
     --border: rgba(255, 255, 255, 0.08);
     --glass: rgba(10, 10, 10, 0.6);
     --font-heading: 'Outfit', sans-serif;
@@ -60,7 +60,7 @@ body.loading {
     text-indent: 0.5em;
 }
 .preloader-text::after {
-    content: "NSG FITNESS";
+    content: "O2 GYM";
     position: absolute;
     top: 0; left: 0;
     color: #fff;
@@ -625,7 +625,7 @@ a {
     top: 0; left: 50%;
     transform: translateX(-50%);
     width: 80%; height: 500px;
-    background: radial-gradient(ellipse at top, rgba(255, 51, 0, 0.15), transparent 70%);
+    background: radial-gradient(ellipse at top, rgba(0, 163, 224, 0.15), transparent 70%);
     pointer-events: none;
 }
 .footer-top {
