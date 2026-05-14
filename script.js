@@ -1,7 +1,7 @@
 // Initialize Lenis Smooth Scrolling
 const lenis = new Lenis({
-    duration: 1.5,
-    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+    duration: 2.2,
+    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -11 * t)), // Silkier exponential curve
     direction: 'vertical',
     gestureDirection: 'vertical',
     smooth: true,
@@ -44,26 +44,26 @@ window.addEventListener('load', () => {
 
 function initHeroAnimations() {
     gsap.from('.hero-title', {
-        y: 100,
+        y: 80,
         opacity: 0,
-        duration: 2,
-        ease: 'power4.out'
+        duration: 2.5,
+        ease: 'expo.out'
     });
     
     gsap.from('.hero-subtitle', {
-        y: 50,
+        y: 40,
         opacity: 0,
-        duration: 2,
-        delay: 0.4,
-        ease: 'power4.out'
+        duration: 2.5,
+        delay: 0.3,
+        ease: 'expo.out'
     });
 
     gsap.from('.scroll-indicator', {
         y: 30,
         opacity: 0,
-        duration: 1.5,
-        delay: 1,
-        ease: 'power3.out'
+        duration: 2,
+        delay: 0.8,
+        ease: 'expo.out'
     });
 }
 
@@ -76,11 +76,11 @@ if (window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
     document.body.classList.add('has-custom-cursor');
 
     // Use gsap.quickTo for high performance cursor tracking
-    const xToCursor = gsap.quickTo(cursor, "x", {duration: 0.1, ease: "power3"});
-    const yToCursor = gsap.quickTo(cursor, "y", {duration: 0.1, ease: "power3"});
+    const xToCursor = gsap.quickTo(cursor, "x", {duration: 0.05, ease: "power3"});
+    const yToCursor = gsap.quickTo(cursor, "y", {duration: 0.05, ease: "power3"});
     
-    const xToFollower = gsap.quickTo(follower, "x", {duration: 0.6, ease: "power3"});
-    const yToFollower = gsap.quickTo(follower, "y", {duration: 0.6, ease: "power3"});
+    const xToFollower = gsap.quickTo(follower, "x", {duration: 0.8, ease: "expo"});
+    const yToFollower = gsap.quickTo(follower, "y", {duration: 0.8, ease: "expo"});
 
     window.addEventListener('mousemove', (e) => {
         xToCursor(e.clientX);
@@ -146,9 +146,9 @@ revealElements.forEach(elem => {
         { x: x, y: y, opacity: 0 },
         {
             x: 0, y: 0, opacity: 1,
-            duration: 1.8,
+            duration: 2.5,
             delay: delay,
-            ease: "power4.out",
+            ease: "expo.out",
             scrollTrigger: {
                 trigger: elem,
                 start: "top 85%",
@@ -183,7 +183,7 @@ ScrollTrigger.create({
 // Simple Ambient Particles in Hero
 const particlesContainer = document.getElementById('particles');
 if(particlesContainer) {
-    for(let i=0; i<30; i++) {
+    for(let i=0; i<15; i++) {
         let particle = document.createElement('div');
         particle.style.position = 'absolute';
         particle.style.width = Math.random() * 3 + 'px';
